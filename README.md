@@ -1,5 +1,9 @@
 # TransCAM
 
+This is the official repo of the paper: [TransCAM: Transformer Attention-based CAM Refinement for Weakly Supervised Semantic Segmentation](https://arxiv.org/abs/2203.07239)
+
+<img src="example.png" width="600">
+
 ## Prerequisite
 
 #### 1. install dependencies 
@@ -17,11 +21,15 @@ Download ResNet-38 pretained weights from https://github.com/YudeWang/SEAM
 #### 1. train the conformer classifier
 ```python train_TransCAM.py --weights {pretrained_conformer_weights}```
 
+You can also download our trained weights [here](https://drive.google.com/file/d/1-vnpvqtSG4WaLiR9uqLKrBU8wDeIjvqO/view?usp=sharing)
+
 #### 2. TransCAM inference
 ```python infer_TransCAM.py --weights {trained_weights}```
 
+We provide a notebook for visualizing TransCAM result: [visualize.ipynb](visualize.ipynb)
+
 #### 3. TransCAM evaluation
-```python evaluation.py --predict_dir data/transcam/out_cam```
+```python evaluation.py --comment transcam --predict_dir data/transcam/out_cam```
 
 ### PSA step
 
@@ -32,7 +40,7 @@ Download ResNet-38 pretained weights from https://github.com/YudeWang/SEAM
 ```python infer_aff.py```
 
 #### 3. RW evaluation
-```python evaluation.py --predict_dir data/transcam/out_rw --type png```
+```python evaluation.py --comment transcam_rw --predict_dir data/transcam/out_rw --type png```
 
 ### DeepLab step
 
@@ -42,7 +50,17 @@ Download ResNet-38 pretained weights from https://github.com/YudeWang/SEAM
 #### 2. test DeepLab
 ```python test_deeplab.py```
 
-### Acknowledge 
+## Citation
+```
+@article{li2022transcam,
+  title={TransCAM: Transformer Attention-based CAM Refinement for Weakly Supervised Semantic Segmentation},
+  author={Li, Ruiwen and Mai, Zheda and Trabelsi, Chiheb and Zhang, Zhibo and Jang, Jongseong and Sanner, Scott},
+  journal={arXiv preprint arXiv:2203.07239},
+  year={2022}
+}
+```
+
+## Acknowledge 
 This repo is developed based on SEAM [1] and Conformer [2]
 
 [1] Wang, Yude, et al. "Self-supervised equivariant attention mechanism for weakly supervised semantic segmentation." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020.

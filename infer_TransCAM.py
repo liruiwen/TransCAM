@@ -30,8 +30,6 @@ if __name__ == '__main__':
 
     if not os.path.exists(args.out_cam):
         os.makedirs(args.out_cam)
-    if not os.path.exists(os.path.join(args.out_cam_pred, args.method)):
-        os.makedirs(os.path.join(args.out_cam_pred, args.method))
 
     model = getattr(importlib.import_module(args.network), 'Net_' + args.arch)()
     model.load_state_dict(torch.load(args.weights))
