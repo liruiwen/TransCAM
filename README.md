@@ -2,6 +2,8 @@
 
 This is the official repo of the paper: [TransCAM: Transformer Attention-based CAM Refinement for Weakly Supervised Semantic Segmentation](https://arxiv.org/abs/2203.07239)
 
+Accepted to Journal of Visual Communication and Image Representation 2023
+
 <img src="example.png" width="600">
 
 ## Prerequisite
@@ -52,11 +54,13 @@ We provide a notebook for visualizing TransCAM result: [visualize.ipynb](visuali
 
 ## Citation
 ```
-@article{li2022transcam,
-  title={TransCAM: Transformer Attention-based CAM Refinement for Weakly Supervised Semantic Segmentation},
-  author={Li, Ruiwen and Mai, Zheda and Trabelsi, Chiheb and Zhang, Zhibo and Jang, Jongseong and Sanner, Scott},
-  journal={arXiv preprint arXiv:2203.07239},
-  year={2022}
+@article{li2023transcam,
+  title={Transcam: Transformer attention-based cam refinement for weakly supervised semantic segmentation},
+  author={Li, Ruiwen and Mai, Zheda and Zhang, Zhibo and Jang, Jongseong and Sanner, Scott},
+  journal={Journal of Visual Communication and Image Representation},
+  pages={103800},
+  year={2023},
+  publisher={Elsevier}
 }
 ```
 
